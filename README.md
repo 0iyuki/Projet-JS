@@ -1,4 +1,4 @@
-# P R O J E T  J S
+# P R O J E T - J S
 
 Concepte a avoir :
 - Manipulation DOM (style, HTML, ...)
