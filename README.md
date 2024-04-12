@@ -1,6 +1,6 @@
 # P R O J E T - J S
 
-Concepte a avoir :
+Concepte à avoir :
 - Manipulation DOM (style, HTML, ...)
 - Time out / Intervalles (= timing)
 - Evènements (click, input, submit, ...)
