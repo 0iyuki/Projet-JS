@@ -1,7 +1,7 @@
 Concepte a avoir :
 - Manipulation DOM (style, HTML, ...)
-- Time out /
-- Evènements
-- Algorithme basique
-- API (json)
-- UI / UX
+- Time out / Intervalles (= timing)
+- Evènements (click, input, submit, ...)
+- Algorithme basique (fonctions, boucles, ...)
+- API (json, fetch)
+- UI / UX (ergonomie)
