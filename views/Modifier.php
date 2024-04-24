@@ -1,15 +1,15 @@
-<?php require("Menu.php"); ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/Css/Style.css">
     <title>Modifier un Livre</title>
 </head>
 
 <body>
+    <?php require("Menu.php"); ?>
     <h1>Modifier un Livre</h1>
     <?php
     // Vérifier si l'ID du livre à modifier est passé en paramètre

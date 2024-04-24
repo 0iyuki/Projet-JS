@@ -1,4 +1,3 @@
-<?php require("Menu.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="./assets/Css/Style.css">
 </head>
 
 <body>
+    <?php include_once("Menu.php"); ?>
+
     <h2>Page D'Accueil</h2>
     <p>Ceci est la page d'accueil.</p>
     <h3>Votre Bibliothèque :</h3>
@@ -22,18 +24,20 @@
             </tr>
         </thead>
         <tbody>
-            <?php 
-            $books = json_decode($data, true); // Décoder la chaîne JSON en tableau associatif
-            foreach ($books as $book) : ?>
-                <tr>
-                    <!-- Affichage des données de chaque livre -->
-                    <td><?= htmlspecialchars($book["name"]); ?></td>
-                    <td><?= htmlspecialchars($book['genre']); ?></td>
-                    <td><?= htmlspecialchars($book['summary']); ?></td>
-                </tr>
-            <?php endforeach; ?>
         </tbody>
     </table>
+
+    <script src="/ProjetJS/assets/Script/bookTable.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const keys = [ "name", "genre", "summary" ];
+            const table = document.querySelector("tbody");
+            updateTable(table, keys)
+        })
+    </script>
 </body>
+</html>
+</body>
+
 
 </html>

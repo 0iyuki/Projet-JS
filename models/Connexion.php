@@ -11,7 +11,7 @@ function dbConnect()
     }
 }
 
-function dbAll()
+function getAllBooks()
 {
     $db = dbConnect();
     $sql = "SELECT * FROM books";
@@ -20,9 +20,9 @@ function dbAll()
     if ($statement->execute()) {
         $books = $statement->fetchAll(PDO::FETCH_ASSOC);
         // Convertir les données en JSON
-        return json_encode($books);
+        return $books;
     } else {
-        return json_encode([]); // Retourner un tableau vide en cas d'échec de l'exécution de la requête
+        return []; // Retourner un tableau vide en cas d'échec de l'exécution de la requête
     }
 }
 

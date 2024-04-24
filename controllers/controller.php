@@ -3,13 +3,13 @@ require("./models/Connexion.php");
 function DisplayHome()
 // fonction pour afficher la page accueil
 {
-    $data = dball();
+    $data = getAllBooks();
     require("./views/Accueil.php");
 }
 function DisplayBooks()
 // fonction pour afficher la page de consulatation
 {
-    $data = dball();
+    $data = getAllBooks();
     require("./views/Consultation.php");
 }
 
