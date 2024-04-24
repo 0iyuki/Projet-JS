@@ -1,4 +1,4 @@
-<?php require("Menu.php");?>
+<?php require("Menu.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,29 +7,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page De Consultation</title>
-    <script src="./assets/Script/ScriptFiltreRecherche.js"></script>
 </head>
 
 <body>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Recherche</button>
-        <div id="Dropdown" class="dropdown-content">
-            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-            <?php
-            // Connexion à la base de données
-            require_once("./models/Connexion.php");
-
-            // Récupération des titres des livres depuis la base de données
-            $books = dbAll();
-
-            // Affichage des titres des livres dans le menu déroulant
-            foreach ($books as $book) {
-                echo '<a href="#">' . htmlspecialchars($book["name"]) . '</a>';
-            }
-            ?>
-        </div>
-    </div>
-
     <main>
         <h2>Page De Consultation</h2>
         <table>

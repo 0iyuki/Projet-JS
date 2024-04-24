@@ -22,15 +22,15 @@
         if ($book_details) {
     ?>
             <form class="Ajout" action="index.php?page=Modifier" method="post">
-                <input type="hidden" name="id" value="<?= $book_id; ?>">
+                <input class="inputAjout" type="hidden" name="id" value="<?= $book_id; ?>">
                 <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" value="<?= htmlspecialchars($book_details['name']); ?>" required><br>
+                <input class="inputAjout" type="text" id="name" name="name" value="<?= htmlspecialchars($book_details['name']); ?>" required><br>
                 <label for="author">Auteur:</label>
-                <input type="text" id="author" name="author" value="<?= htmlspecialchars($book_details['author']); ?>" required><br>
+                <input class="inputAjout" type="text" id="author" name="author" value="<?= htmlspecialchars($book_details['author']); ?>" required><br>
                 <label for="date">Date:</label>
-                <input type="text" id="date" name="date" value="<?= date('d/m/Y'); ?>" required><br>
+                <input class="inputAjout" type="text" id="date" name="date" value="<?= date('d/m/Y'); ?>" required><br>
                 <label for="genre">Genre:</label>
-                <input type="text" id="genre" name="genre" value="<?= htmlspecialchars($book_details['genre']); ?>" required><br>
+                <input class="inputAjout" type="text" id="genre" name="genre" value="<?= htmlspecialchars($book_details['genre']); ?>" required><br>
                 <label for="summary">Résumé:</label><br>
                 <textarea id="summary" name="summary" rows="4" cols="50"><?= htmlspecialchars($book_details['summary']); ?></textarea><br>
                 <button type="submit">Modifier</button>
