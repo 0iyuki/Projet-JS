@@ -32,6 +32,7 @@
                         $books = dbAll();
 
                         // Affichage des titres des livres dans le menu déroulant
+                        $books = json_decode($data, true);
                         foreach ($books as $book) {
                             echo '<a href="#">' . htmlspecialchars($book["name"]) . '</a>';
                         }

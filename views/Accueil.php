@@ -22,7 +22,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($data as $book) : ?>
+            <?php 
+            $books = json_decode($data, true); // Décoder la chaîne JSON en tableau associatif
+            foreach ($books as $book) : ?>
                 <tr>
                     <!-- Affichage des données de chaque livre -->
                     <td><?= htmlspecialchars($book["name"]); ?></td>

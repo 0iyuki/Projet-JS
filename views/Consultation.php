@@ -17,14 +17,16 @@
                 <tr>
                     <th>Titre</th>
                     <th>Auteur</th>
-                    <th>Update</th>
+                    <th>Date</th>
                     <th>Résumé</th>
                     <th>Genre</th>
                     <th>Options</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($books as $book) : ?>
+                <?php 
+                $books = json_decode($data, true); // Décoder la chaîne JSON en tableau associatif
+                foreach ($books as $book) : ?>
                     <tr>
                         <td><?= htmlspecialchars($book["name"]); ?></td>
                         <td><?= htmlspecialchars($book['author']); ?></td>
@@ -44,3 +46,4 @@
         </table>
     </main>
 </body>
+</html>

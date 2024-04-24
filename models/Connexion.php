@@ -12,16 +12,17 @@ function dbConnect()
 }
 
 function dbAll()
-// fonction pour afficher tous les livres
 {
-    $db = dbConnect(); // connection a la base de donnée
-    $sql = "SELECT * FROM books"; // requête sql
-    $statement = $db->prepare($sql); // preparation de la requête sql
+    $db = dbConnect();
+    $sql = "SELECT * FROM books";
+    $statement = $db->prepare($sql);
 
-    if ($statement->execute()) { // execution de la requête sql
-        return $statement->fetchAll();
+    if ($statement->execute()) {
+        $books = $statement->fetchAll(PDO::FETCH_ASSOC);
+        // Convertir les données en JSON
+        return json_encode($books);
     } else {
-        return []; // Retourner un tableau vide en cas d'échec de l'exécution de la requête
+        return json_encode([]); // Retourner un tableau vide en cas d'échec de l'exécution de la requête
     }
 }
 
