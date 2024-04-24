@@ -1,6 +1,6 @@
 (function () {
     "use stict"
-    const slideTimeout = 5000;
+    const slideTimeout = 2900;
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
     const $slides = document.querySelectorAll('.slide');
